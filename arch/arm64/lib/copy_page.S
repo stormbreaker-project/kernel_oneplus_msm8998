@@ -28,7 +28,7 @@
  *	x0 - dest
  *	x1 - src
  */
-ENTRY(copy_page)
+SYM_FUNC_START(copy_page)
 alternative_if_not ARM64_HAS_NO_HW_PREFETCH
 	nop
 	nop
@@ -90,4 +90,4 @@ alternative_endif
 	stnp	x16, x17, [x0, #112]
 
 	ret
-ENDPROC(copy_page)
+SYM_FUNC_END(copy_page)
