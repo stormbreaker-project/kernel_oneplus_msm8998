@@ -95,7 +95,7 @@ extern unsigned int full_name_hash(const unsigned char *, unsigned int);
  */
 #ifdef CONFIG_64BIT
 # ifdef CONFIG_ARM64
-#  define DNAME_INLINE_LEN 96 /* 256 bytes */
+#  define DNAME_INLINE_LEN 32 + 192 /* 384 bytes */
 # else
 #  define DNAME_INLINE_LEN 32 /* 192 bytes */
 # endif
